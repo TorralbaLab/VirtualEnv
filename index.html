@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VirtualEnv is a high-fidelity Unreal Engine 5 simulation platform for benchmarking LLMs in embodied tasks.">
+  <meta name="keywords" content="VirtualEnv, embodied AI, Unreal Engine 5, simulation, LLMs, multi-agent, benchmarking">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VirtualEnv: A Platform for Embodied AI Research</title>
+
+  <!-- Fonts (matches the Nerfies template look) -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <!-- CSS: Bulma + extensions (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Custom CSS (inspired by Nerfies template) -->
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <!-- JS (CDN) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/js/bulma-slider.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#top">
+        <strong>VirtualEnv</strong>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarMain" class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#features">Features</a>
+        <a class="navbar-item" href="#benchmarks">Benchmarks</a>
+        <a class="navbar-item" href="#bibtex">BibTeX</a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-small is-dark is-rounded" href="https://arxiv.org/abs/2601.07553" target="_blank" rel="noopener">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              <span>arXiv</span>
+            </a>
+            <a class="button is-small is-dark is-rounded" href="https://arxiv.org/pdf/2601.07553.pdf" target="_blank" rel="noopener">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">VirtualEnv: A Platform for Embodied AI Research</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Kabir Swain</span>,
+          <span class="author-block">Sijie Han</span>,
+          <span class="author-block">Ayush Raina</span>,
+          <span class="author-block">Jin Zhang</span>,
+          <span class="author-block">Shuang Li</span>,
+          <span class="author-block">Michael Stopa</span>,
+          <span class="author-block">Antonio Torralba</span>
+            </div>
+
+            <div class="is-size-6 publication-venue">
+              arXiv:2601.07553v2 (last revised Feb 7, 2026)
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2601.07553.pdf" target="_blank" rel="noopener"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (PDF)</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2601.07553" target="_blank" rel="noopener"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://arxiv.org/html/2601.07553v2" target="_blank" rel="noopener"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-globe"></i></span>
+                  <span>arXiv HTML</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#bibtex" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fas fa-quote-right"></i></span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaser -->
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <figure class="image">
+              <img class="teaser" src="./static/images/teaser.png" alt="VirtualEnv teaser">
+            </figure>
+            <p class="figure-caption has-text-centered">
+              VirtualEnv is a high-fidelity Unreal Engine 5 simulator designed for benchmarking LLM-driven embodied agents
+              with rich interactions, procedural scenario generation, and multi-agent collaboration.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section class="section" id="abstract">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="content">
+            <p>As large language models (LLMs) continue to improve in reasoning and decision-making, there is a growing need for realistic and interactive environments where their abilities can be rigorously evaluated. We present VirtualEnv, a next-generation simulation platform built on Unreal Engine 5 that enables fine-grained benchmarking of LLMs in embodied and interactive scenarios. VirtualEnv supports rich agent–environment interactions, including object manipulation, navigation, and adaptive multi-agent collaboration, as well as game-inspired mechanics like escape rooms and procedurally generated environments. We provide a user-friendly API built on top of Unreal Engine, allowing researchers to deploy and control LLM-driven agents using natural language instructions. We integrate large-scale LLMs and vision-language models (VLMs), such as GPT-based models, to generate novel environments and structured tasks from multimodal inputs. Our experiments benchmark the performance of several popular LLMs across tasks of increasing complexity, analyzing differences in adaptability, planning, and multi-agent coordination. We also describe our methodology for procedural task generation, task validation, and real-time environment control. VirtualEnv is released as an open-source platform, we aim to advance research at the intersection of AI and gaming, enable standardized evaluation of LLMs in embodied AI settings, and pave the way for future developments in immersive simulations and interactive entertainment.</p>
+
+            <div class="notice">
+              <strong>Note:</strong> This page is a project-page scaffold generated from the paper text. Replace the
+              placeholder images (and optionally add videos / demos) as you build out an official project page.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">What VirtualEnv Provides</h2>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="columns">
+            <div class="column">
+              <div class="box">
+                <p class="title is-5"><span class="icon"><i class="fas fa-city"></i></span> High-fidelity worlds</p>
+                <div class="content">
+                  Built on Unreal Engine 5 with photorealistic indoor + outdoor settings (offices, retail venues, urban streetscapes).
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box">
+                <p class="title is-5"><span class="icon"><i class="fas fa-cubes"></i></span> Large interactive asset library</p>
+                <div class="content">
+                  20,000+ objects with affordances (open / close, grasp, move, use appliances) and realistic physics.
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box">
+                <p class="title is-5"><span class="icon"><i class="fas fa-people-group"></i></span> Multi-agent + language</p>
+                <div class="content">
+                  Supports multi-agent collaboration and language-guided planning/interaction via a lightweight Python API.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div class="column">
+              <div class="box">
+                <p class="title is-5"><span class="icon"><i class="fas fa-wand-magic-sparkles"></i></span> Language-driven scenario generation</p>
+                <div class="content">
+                  A user prompt is decomposed into sub-goals/puzzles; required objects are instantiated by updating the scene graph and rendering the environment.
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box">
+                <p class="title is-5"><span class="icon"><i class="fas fa-key"></i></span> Escape room benchmarks</p>
+                <div class="content">
+                  Four levels of escape-room difficulty (from one-step problems to deceptive clues) to stress-test reasoning in dynamic scenes.
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box">
+                <p class="title is-5"><span class="icon"><i class="fas fa-pen-ruler"></i></span> Natural-language scene editing</p>
+                <div class="content">
+                  A vLLM converts a command (e.g., “put a key inside the box”) into JSON edits; an interpretation check compares the graph to the rendered view.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content">
+            <p><strong>Benchmarks highlighted in the paper:</strong></p>
+            <ul>
+              <li>Visual realism survey comparing VirtualEnv to OmniGibson, AI2-THOR, VirtualHome, and Habitat (N=31).</li>
+              <li>Reasoning (chain-of-thought) LLM variants outperform base models (reported average +11% task completion).</li>
+              <li>Multi-agent collaboration improves success on multi-step tasks via task allocation and reduced occlusion uncertainty.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benchmarks -->
+  <section class="section" id="benchmarks">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Benchmarks & Analysis</h2>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="content">
+            <h3 class="title is-4">Visual realism study (N=31)</h3>
+            <p>
+              The paper reports a label-blind user study where respondents rate visual realism from 5 (best) to 1 (worst).
+              VirtualEnv receives the highest mean score.
+            </p>
+          </div>
+
+          <figure class="image">
+            <img class="teaser" src="./static/images/visual_realism.png" alt="Visual realism survey results">
+          </figure>
+          <p class="figure-caption has-text-centered">
+            Bar chart recreated from values reported in the paper (mean ± std).
+          </p>
+
+          <div class="content" style="margin-top: 2.25rem;">
+            <h3 class="title is-4">Failure mode distribution</h3>
+            <p>
+              The paper analyzes six recurring failure modes for LLM planners in partially observable embodied tasks.
+              The most common is <em>exploration loops</em> (agents repeatedly visiting the same rooms), followed by
+              <em>phantom goals</em> (pursuing non-existent objects).
+            </p>
+          </div>
+
+          <figure class="image">
+            <img class="teaser" src="./static/images/failure_modes.png" alt="Failure modes distribution">
+          </figure>
+          <p class="figure-caption has-text-centered">
+            Failure categories and percentages are taken from the paper text.
+          </p>
+
+          <div class="content" style="margin-top: 2.25rem;">
+            <h3 class="title is-4">Example benchmark tasks</h3>
+            <ul>
+              <li><strong>Clean Floor</strong> (single-agent)</li>
+              <li><strong>Watch TV</strong> (single-agent)</li>
+              <li><strong>Find Object</strong> (single-agent; open-ended search under partial observability)</li>
+              <li><strong>Prepare Food</strong> (multi-agent)</li>
+              <li><strong>Clean Room</strong> (multi-agent)</li>
+            </ul>
+
+            <p>
+              Tip: if you have rollout videos or interactive demos, this is a great section to add a carousel
+              (the Bulma carousel dependency is already included).
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
+  <section class="section" id="bibtex">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">BibTeX</h2>
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <pre class="code-block"><code>@article{swain2026virtualenv,
+  title   = {VirtualEnv: A Platform for Embodied AI Research},
+  author  = {Swain, Kabir and Han, Sijie and Raina, Ayush and Zhang, Jin and Li, Shuang and Stopa, Michael and Torralba, Antonio},
+  journal = {arXiv preprint arXiv:2601.07553},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2601.07553}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          This project page is styled after the <a href="https://nerfies.github.io/" target="_blank" rel="noopener">Nerfies</a>
+          project-page template.
+        </p>
+        <p>
+          Paper: <a href="https://arxiv.org/abs/2601.07553" target="_blank" rel="noopener">arXiv:2601.07553</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

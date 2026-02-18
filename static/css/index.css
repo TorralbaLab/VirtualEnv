@@ -1,0 +1,78 @@
+/* Minimal styling inspired by the Nerfies project-page template.
+   This file intentionally stays small; Bulma does most of the heavy lifting. */
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.publication-authors {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.publication-authors .author-block {
+  display: inline-block;
+  margin: 0 0.15rem;
+  white-space: nowrap;
+}
+
+.publication-venue {
+  margin-top: 0.25rem;
+  color: #555;
+}
+
+.publication-links {
+  margin-top: 1.1rem;
+}
+
+.link-block a.button {
+  margin: 0.25rem 0.25rem;
+}
+
+.teaser {
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.15);
+}
+
+.figure-caption {
+  margin-top: 0.6rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.section {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.section .title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.code-block {
+  background: #f7f7f7;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+}
+
+.footer {
+  padding: 2rem 1.5rem 2rem;
+}
+
+.footer .content {
+  font-size: 0.95rem;
+}
+
+.notice {
+  background: #fffbe6;
+  border: 1px solid #ffe58f;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
